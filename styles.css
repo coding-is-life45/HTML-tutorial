@@ -11,7 +11,7 @@
 }
 
 nav {
-  height: 65px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,14 +19,7 @@ nav {
   background-color: #cafdff;
 }
 
-.row {
-    width: 100%;
-    max-width: 1300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
+
 
 a {
   color: #000;
@@ -44,9 +37,20 @@ li {
   padding-left: 16px;
 }
 
+.row {
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
 header {
   background-color: #eadcff;
-  height: calc(100vh - 65px);
+  height: calc(100vh - 70px);
+  padding: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,14 +62,16 @@ h1 {
 
 .subheader {
   font-size: 36px;
+  margin: 16px 0 24px 0;
 }
 
 button {
   background-color: #05c7cf;
   padding: 8px 16px;
   font-size: 24px;
-  margin: 0 16px;
+  
   color: white;
+  border: none;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -98,15 +104,16 @@ h2 {
   align-items: center;
   justify-content: center;
 }
-.about__img--wrapper {
-  width: 40%;
-}
 
 img {
-  width: 100%;
+    width: 100%;
 }
 .section__description--wrapper {
-  width: 60%;
+    width: 60%;
+}
+
+.about__img--wrapper {
+  width: 40%;
 }
 
 .about__img--wrapper,
@@ -145,6 +152,7 @@ form {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    padding: 0 24px;
 }
 
 input, 
@@ -173,4 +181,57 @@ footer {
 
 .footer__link {
     padding: 0 16px;
+}
+
+@media (max-width: 728px) {
+    .row {
+        flex-direction: column;
+    }
+   .home__description {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+.home__description--button {
+    max-width: 240px;
+}
+
+   h1 {
+    text-align: center;
+    font-size: 60px;
+   }
+   .subheader {
+    text-align: center;
+    font-size: 28px;
+   }
+   ul {
+    display: none;
+   }
+   .section__description {
+    flex-direction: column;
+   }
+
+   .section__description--wrapper, .about__img--wrapper {
+    width: 100%;
+   }
+
+   #discord.section__description {
+    flex-direction: column-reverse;
+   }
+   footer {
+    padding: 48px 24px
+   }
+
+   .footer__logo {
+    max-width: 360px;
+   }
+   .footer__link {
+    padding: 0 4px;
+    font-size: 18px;
+   }
+   .footer__links {
+    margin-bottom:  24px;
+   }
 }
